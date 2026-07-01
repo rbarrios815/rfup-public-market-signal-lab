@@ -1,0 +1,9 @@
+metric,value
+mae_return,0.007963660280547569
+rmse_return,0.011089413263884813
+directional_accuracy,0.512853470437018
+signal_hit_rate,0.5612648221343873
+strategy_cagr,0.12892192495961008
+benchmark_cagr,0.17735235231683233
+strategy_max_drawdown,-0.19819786132400874
+benchmark_max_drawdown,-0.25425096319028595
