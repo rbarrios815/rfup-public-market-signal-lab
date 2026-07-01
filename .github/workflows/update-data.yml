@@ -36,7 +36,7 @@ jobs:
           ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           GOOGLE_SHEET_ID: ${{ vars.GOOGLE_SHEET_ID }}
-        run: python src/build_model.py
+        run: python src/run_resilient.py
       - name: Commit refreshed outputs
         run: |
           git config user.name "github-actions[bot]"
