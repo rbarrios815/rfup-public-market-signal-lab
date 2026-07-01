@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "generated_at_utc": "2026-07-01T17:45:00+00:00",
+    "data_through": "2026-06-30",
+    "status": "demo",
+    "target": "SPY",
+    "model": "RidgeCV expanding-window walk-forward",
+    "run_id": "DEMO-INITIAL",
+    "sheet_url": "https://docs.google.com/spreadsheets/d/1D2jwkfc5rT-54elnimGGFnrEPcGaDaraJkSbO0gXZmg/edit",
+    "revision_bias_flag": true,
+    "revision_bias_note": "Demo preview only. The scheduled workflow replaces this with public market data and flags revised macro history until ALFRED vintages are enabled.",
+    "price_source": "deterministic packaged preview",
+    "source_status": {}
+  },
+  "forecast": {
+    "origin_date": "2026-06-30",
+    "next_date": "2026-07-01",
+    "predicted_return": 0.0018,
+    "predicted_close": 612.10,
+    "lower_return": -0.012,
+    "upper_return": 0.0156,
+    "signal": "HOLD",
+    "confidence": 0.34,
+    "entry_threshold": 0.0025,
+    "exit_threshold": -0.0018
+  },
+  "metrics": {
+    "mae_return": 0.0078,
+    "rmse_return": 0.0104,
+    "directional_accuracy": 0.548,
+    "signal_hit_rate": 0.531,
+    "strategy_cagr": 0.112,
+    "benchmark_cagr": 0.094,
+    "strategy_max_drawdown": -0.083,
+    "benchmark_max_drawdown": -0.102
+  },
+  "series": [
+    {"date":"2026-06-13","actual_close":598.20,"predicted_close":597.60,"actual_return":0.0021,"predicted_return":0.0011,"signal":"HOLD","velocity":0.22,"acceleration":0.07,"jerk":-0.04,"opposite_velocity":-0.22,"strategy_equity":1.0000,"benchmark_equity":1.0000},
+    {"date":"2026-06-16","actual_close":600.40,"predicted_close":599.10,"actual_return":0.0037,"predicted_return":0.0015,"signal":"ENTER","velocity":0.48,"acceleration":0.26,"jerk":0.19,"opposite_velocity":-0.48,"strategy_equity":1.0035,"benchmark_equity":1.0037},
+    {"date":"2026-06-17","actual_close":599.10,"predicted_close":601.20,"actual_return":-0.0022,"predicted_return":0.0013,"signal":"HOLD","velocity":-0.25,"acceleration":-0.73,"jerk":-0.99,"opposite_velocity":0.25,"strategy_equity":1.0013,"benchmark_equity":1.0015},
+    {"date":"2026-06-18","actual_close":603.50,"predicted_close":600.20,"actual_return":0.0073,"predicted_return":0.0018,"signal":"HOLD","velocity":0.81,"acceleration":1.06,"jerk":1.79,"opposite_velocity":-0.81,"strategy_equity":1.0086,"benchmark_equity":1.0088},
+    {"date":"2026-06-20","actual_close":602.10,"predicted_close":604.00,"actual_return":-0.0023,"predicted_return":0.0008,"signal":"EXIT","velocity":-0.29,"acceleration":-1.10,"jerk":-2.16,"opposite_velocity":0.29,"strategy_equity":1.0061,"benchmark_equity":1.0065},
+    {"date":"2026-06-23","actual_close":605.30,"predicted_close":603.00,"actual_return":0.0053,"predicted_return":0.0015,"signal":"HOLD","velocity":0.58,"acceleration":0.87,"jerk":1.97,"opposite_velocity":-0.58,"strategy_equity":1.0061,"benchmark_equity":1.0118},
+    {"date":"2026-06-24","actual_close":607.80,"predicted_close":606.20,"actual_return":0.0041,"predicted_return":0.0015,"signal":"ENTER","velocity":0.44,"acceleration":-0.14,"jerk":-1.01,"opposite_velocity":-0.44,"strategy_equity":1.0100,"benchmark_equity":1.0160},
+    {"date":"2026-06-25","actual_close":606.20,"predicted_close":608.60,"actual_return":-0.0026,"predicted_return":0.0013,"signal":"HOLD","velocity":-0.31,"acceleration":-0.75,"jerk":-0.61,"opposite_velocity":0.31,"strategy_equity":1.0074,"benchmark_equity":1.0133},
+    {"date":"2026-06-26","actual_close":609.10,"predicted_close":607.00,"actual_return":0.0048,"predicted_return":0.0013,"signal":"HOLD","velocity":0.51,"acceleration":0.82,"jerk":1.57,"opposite_velocity":-0.51,"strategy_equity":1.0122,"benchmark_equity":1.0182},
+    {"date":"2026-06-27","actual_close":608.40,"predicted_close":609.90,"actual_return":-0.0011,"predicted_return":0.0013,"signal":"HOLD","velocity":-0.14,"acceleration":-0.65,"jerk":-1.47,"opposite_velocity":0.14,"strategy_equity":1.0111,"benchmark_equity":1.0170},
+    {"date":"2026-06-30","actual_close":611.00,"predicted_close":609.30,"actual_return":0.0043,"predicted_return":0.0015,"signal":"HOLD","velocity":0.46,"acceleration":0.60,"jerk":1.25,"opposite_velocity":-0.46,"strategy_equity":1.0154,"benchmark_equity":1.0214}
+  ],
+  "feature_importance": [
+    {"feature":"hy_oas_change_5d","coefficient":-0.0019,"contribution":-0.0014},
+    {"feature":"ma_distance_200","coefficient":0.0015,"contribution":0.0011},
+    {"feature":"vix_change_1d","coefficient":-0.0012,"contribution":-0.0009},
+    {"feature":"velocity","coefficient":0.0011,"contribution":0.0007},
+    {"feature":"curve_10y_2y","coefficient":0.0009,"contribution":0.0006},
+    {"feature":"realized_vol_20d","coefficient":-0.0008,"contribution":-0.0005},
+    {"feature":"ig_oas_change_5d","coefficient":-0.0007,"contribution":-0.0004},
+    {"feature":"return_20d","coefficient":0.0006,"contribution":0.0004}
+  ]
+}
