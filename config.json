@@ -1,0 +1,14 @@
+{
+  "target_symbol": "SPY",
+  "forecast_horizon_days": 1,
+  "minimum_training_days": 756,
+  "retrain_frequency_days": 21,
+  "transaction_cost_bps": 2.0,
+  "entry_quantile": 0.65,
+  "exit_quantile": 0.35,
+  "allow_short": false,
+  "google_sheet_id": "1D2jwkfc5rT-54elnimGGFnrEPcGaDaraJkSbO0gXZmg",
+  "google_sheet_url": "https://docs.google.com/spreadsheets/d/1D2jwkfc5rT-54elnimGGFnrEPcGaDaraJkSbO0gXZmg/edit",
+  "price_provider": "auto",
+  "stooq_symbol": "spy.us"
+}
