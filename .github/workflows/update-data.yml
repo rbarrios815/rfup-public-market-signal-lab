@@ -2,6 +2,14 @@ name: Refresh public market model
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "tests/**"
+      - "config.json"
+      - "requirements.txt"
+      - ".github/workflows/update-data.yml"
   schedule:
     - cron: "30 23 * * 1-5"
 
