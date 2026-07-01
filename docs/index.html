@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Public-data walk-forward SPY signal dashboard" />
+  <title>RFUP Public Market Signal Lab</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">RFUP · PUBLIC-DATA RESEARCH</p>
+      <h1>Market Signal Lab</h1>
+      <p class="subtitle">Next-session SPY forecast, walk-forward accuracy, entry/exit decisions, and momentum derivatives.</p>
+    </div>
+    <div class="header-actions">
+      <span id="statusBadge" class="status-badge">Loading</span>
+      <a id="sheetLink" class="button secondary" href="#" target="_blank" rel="noopener">Open Google Sheet</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="warning" class="warning hidden"></section>
+
+    <section class="kpi-grid" aria-label="Key model indicators">
+      <article class="card kpi"><span>Next-session forecast</span><strong id="forecastReturn">—</strong><small id="forecastDate">—</small></article>
+      <article class="card kpi"><span>Signal</span><strong id="signal">—</strong><small id="confidence">—</small></article>
+      <article class="card kpi"><span>Directional accuracy</span><strong id="directionalAccuracy">—</strong><small>Walk-forward only</small></article>
+      <article class="card kpi"><span>Strategy vs benchmark</span><strong id="strategyVsBenchmark">—</strong><small id="drawdown">—</small></article>
+    </section>
+
+    <section class="card chart-card">
+      <div class="section-heading">
+        <div><p class="eyebrow">HISTORICAL VALIDATION</p><h2>Actual vs predicted close with entry and exit markers</h2></div>
+        <div id="dataThrough" class="muted">—</div>
+      </div>
+      <div class="chart-wrap tall"><canvas id="priceChart"></canvas></div>
+    </section>
+
+    <section class="two-column">
+      <article class="card chart-card">
+        <div class="section-heading"><div><p class="eyebrow">RETURN DYNAMICS</p><h2>Velocity, acceleration, jerk, and opposite velocity</h2></div></div>
+        <div class="chart-wrap"><canvas id="derivativeChart"></canvas></div>
+      </article>
+      <article class="card chart-card">
+        <div class="section-heading"><div><p class="eyebrow">ECONOMIC RESULT</p><h2>Walk-forward strategy equity vs buy-and-hold</h2></div></div>
+        <div class="chart-wrap"><canvas id="equityChart"></canvas></div>
+      </article>
+    </section>
+
+    <section class="two-column">
+      <article class="card chart-card">
+        <div class="section-heading"><div><p class="eyebrow">LATEST MODEL</p><h2>Largest standardized feature contributions</h2></div></div>
+        <div class="chart-wrap"><canvas id="featureChart"></canvas></div>
+      </article>
+      <article class="card methods">
+        <p class="eyebrow">MODEL GOVERNANCE</p>
+        <h2>What the chart does—and does not claim</h2>
+        <dl>
+          <div><dt>Target</dt><dd>Close-to-close SPY return for the next trading session.</dd></div>
+          <div><dt>Validation</dt><dd>Expanding-window predictions; each forecast uses only earlier training rows.</dd></div>
+          <div><dt>Derivatives</dt><dd>Normalized return transforms, not literal physical laws.</dd></div>
+          <div><dt>Ratings</dt><dd>Public spread/TRACE proxies first; issuer actions only when timestamped and legally accessible.</dd></div>
+          <div><dt>Macro revisions</dt><dd>Flagged until ALFRED point-in-time vintages are fully enabled.</dd></div>
+        </dl>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <span id="footerMeta">Research software only. Not investment advice.</span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
