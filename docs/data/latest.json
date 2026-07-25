@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "generated_at_utc": "2026-07-24T00:54:30.756765+00:00",
-    "data_through": "2026-07-23",
+    "generated_at_utc": "2026-07-25T00:58:45.110569+00:00",
+    "data_through": "2026-07-24",
     "status": "live",
     "target": "SPY",
     "model": "RidgeCV expanding-window walk-forward",
-    "run_id": "20260724T005430Z",
+    "run_id": "20260725T005845Z",
     "sheet_url": "https://docs.google.com/spreadsheets/d/1D2jwkfc5rT-54elnimGGFnrEPcGaDaraJkSbO0gXZmg/edit",
     "revision_bias_flag": true,
     "revision_bias_note": "Current FRED history is not yet reconstructed from ALFRED point-in-time vintages.",
@@ -54,42 +54,28 @@
     }
   },
   "forecast": {
-    "origin_date": "2026-07-23",
-    "next_date": "2026-07-24",
-    "predicted_return": 0.0009094923176471786,
-    "predicted_close": 7415.04085685093,
-    "lower_return": -0.017007118828763594,
-    "upper_return": 0.01882610346405795,
+    "origin_date": "2026-07-24",
+    "next_date": "2026-07-27",
+    "predicted_return": 0.0004009140077033272,
+    "predicted_close": 7414.9521623577675,
+    "lower_return": -0.017509982344516117,
+    "upper_return": 0.01831181035992277,
     "signal": "HOLD",
-    "confidence": 0.07685251850410595,
-    "entry_threshold": 0.0005638991611127326,
-    "exit_threshold": -0.000171014638045875
+    "confidence": 0.03540957423248233,
+    "entry_threshold": 0.0005683397424845337,
+    "exit_threshold": -0.00017078207786994513
   },
   "metrics": {
-    "mae_return": 0.007873859425117235,
-    "rmse_return": 0.010932019584436454,
-    "directional_accuracy": 0.5118818240205524,
+    "mae_return": 0.007869076825359218,
+    "rmse_return": 0.010928515914669146,
+    "directional_accuracy": 0.5121951219512195,
     "signal_hit_rate": 0.5478927203065134,
-    "strategy_cagr": 0.11660084906385171,
-    "benchmark_cagr": 0.16587692312853863,
+    "strategy_cagr": 0.11661149790428205,
+    "benchmark_cagr": 0.16585572644262592,
     "strategy_max_drawdown": -0.1755277598496766,
     "benchmark_max_drawdown": -0.25425096319028595
   },
   "series": [
-    {
-      "date": "2023-07-19",
-      "actual_close": 4565.72,
-      "predicted_close": 4552.7328,
-      "actual_return": 0.0023550834835130985,
-      "predicted_return": -0.0004934624061465298,
-      "signal": "HOLD",
-      "velocity": 0.942681175374403,
-      "acceleration": 0.43312831918315464,
-      "jerk": -0.21222402218632208,
-      "opposite_velocity": -0.942681175374403,
-      "strategy_equity": 1.591690108158006,
-      "benchmark_equity": 1.5580960441180478
-    },
     {
       "date": "2023-07-20",
       "actual_close": 4534.87,
@@ -10659,68 +10645,82 @@
       "opposite_velocity": 0.1688224156114901,
       "strategy_equity": 1.935704570110415,
       "benchmark_equity": 2.5281539217559845
+    },
+    {
+      "date": "2026-07-24",
+      "actual_close": 7411.98,
+      "predicted_close": 7415.1127,
+      "actual_return": 0.0004966168082702893,
+      "predicted_return": 0.00091918581039425,
+      "signal": "HOLD",
+      "velocity": -1.4738236790165118,
+      "acceleration": -1.3050012634050216,
+      "jerk": -0.05173182440864332,
+      "opposite_velocity": 1.4738236790165118,
+      "strategy_equity": 1.936666112275016,
+      "benchmark_equity": 2.529409757296132
     }
   ],
   "feature_importance": [
     {
-      "feature": "return_1d",
-      "coefficient": -0.0038545422693475745,
-      "contribution": 0.0041394721154917455
-    },
-    {
-      "feature": "opposite_velocity",
-      "coefficient": -0.0013403381894127216,
-      "contribution": -0.0019515004663428557
-    },
-    {
-      "feature": "velocity",
-      "coefficient": 0.0013403381894127172,
-      "contribution": -0.0019515004663428494
+      "feature": "distance_to_60d_low",
+      "coefficient": 0.0008046523604683508,
+      "contribution": -0.0006166008763559569
     },
     {
       "feature": "ma_distance_50",
-      "coefficient": -0.0011660578392487207,
-      "contribution": 0.0006301794610422635
-    },
-    {
-      "feature": "distance_to_60d_low",
-      "coefficient": 0.0008046926642500861,
-      "contribution": -0.0006239396019794442
+      "coefficient": -0.0011655210760258324,
+      "contribution": 0.0006158666007929969
     },
     {
       "feature": "distance_to_20d_low",
-      "coefficient": -0.0002654062547298292,
-      "contribution": 0.00026172656344884996
+      "coefficient": -0.00026515801811199496,
+      "contribution": 0.0002570020670891987
     },
     {
       "feature": "distance_to_60d_high",
-      "coefficient": -0.000918353799315067,
-      "contribution": -0.00010132426723742324
+      "coefficient": -0.0009184125421848733,
+      "contribution": -0.00011112555573977224
+    },
+    {
+      "feature": "jerk",
+      "coefficient": -9.50295281593105e-05,
+      "contribution": -0.00010291026640756914
     },
     {
       "feature": "distance_to_20d_high",
-      "coefficient": 0.0015722862953434706,
-      "contribution": -0.0001011234217877929
+      "coefficient": 0.0015721317886463288,
+      "contribution": -7.683567437766987e-05
     },
     {
       "feature": "opposite_acceleration",
-      "coefficient": 4.469724976042134e-05,
-      "contribution": 3.8682177218123775e-05
+      "coefficient": 4.440435160713713e-05,
+      "contribution": -4.520268325278125e-05
     },
     {
       "feature": "acceleration",
-      "coefficient": -4.469724976041353e-05,
-      "contribution": 3.868217721811702e-05
+      "coefficient": -4.440435160713539e-05,
+      "contribution": -4.520268325277948e-05
     },
     {
       "feature": "realized_vol_20d",
-      "coefficient": -4.528528111127136e-05,
-      "contribution": 2.1616337430810213e-05
+      "coefficient": -4.5382819439181935e-05,
+      "contribution": 2.166217532813638e-05
+    },
+    {
+      "feature": "ma_distance_200",
+      "coefficient": -7.404835334729452e-05,
+      "contribution": -8.491015006046609e-06
+    },
+    {
+      "feature": "ma_distance_20",
+      "coefficient": -1.3934382832653767e-05,
+      "contribution": 8.207068249020372e-06
     },
     {
       "feature": "return_5d",
-      "coefficient": -1.83826410909227e-05,
-      "contribution": 1.4717789601730061e-05
+      "coefficient": -1.8277680980795545e-05,
+      "contribution": 6.5388420557367354e-06
     }
   ]
 }
