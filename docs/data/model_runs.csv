@@ -1,2 +1,2 @@
 run_id,run_time_utc,data_through,model,feature_count,point_in_time_macro,status
-20260828T065853Z,2026-08-28T06:58:53.543853+00:00,2026-08-27,RidgeCV expanding-window,16,False,success
+20260829T041337Z,2026-08-29T04:13:37.694408+00:00,2026-08-28,RidgeCV expanding-window,16,False,success
