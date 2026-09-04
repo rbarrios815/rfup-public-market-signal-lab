@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "generated_at_utc": "2026-09-03T01:15:43.107240+00:00",
-    "data_through": "2026-09-02",
+    "generated_at_utc": "2026-09-04T01:07:07.383132+00:00",
+    "data_through": "2026-09-03",
     "status": "live",
     "target": "SPY",
     "model": "RidgeCV expanding-window walk-forward",
-    "run_id": "20260903T011543Z",
+    "run_id": "20260904T010707Z",
     "sheet_url": "https://docs.google.com/spreadsheets/d/1D2jwkfc5rT-54elnimGGFnrEPcGaDaraJkSbO0gXZmg/edit",
     "revision_bias_flag": true,
     "revision_bias_note": "Current FRED history is not yet reconstructed from ALFRED point-in-time vintages.",
@@ -54,42 +54,28 @@
     }
   },
   "forecast": {
-    "origin_date": "2026-09-02",
-    "next_date": "2026-09-03",
-    "predicted_return": 0.00012813503312156943,
-    "predicted_close": 7667.582422984987,
-    "lower_return": -0.017356643043244246,
-    "upper_return": 0.017612913109487385,
+    "origin_date": "2026-09-03",
+    "next_date": "2026-09-04",
+    "predicted_return": 0.0003176523718947991,
+    "predicted_close": 7750.17146938335,
+    "lower_return": -0.017166342685114827,
+    "upper_return": 0.017801647428904423,
     "signal": "HOLD",
-    "confidence": 0.011875807287790287,
-    "entry_threshold": 0.0005643125341745464,
-    "exit_threshold": -0.0001870090455092413
+    "confidence": 0.028933711902111112,
+    "entry_threshold": 0.0005635135600410497,
+    "exit_threshold": -0.00018612925979555605
   },
   "metrics": {
-    "mae_return": 0.0077292419600069355,
-    "rmse_return": 0.010669729196566146,
-    "directional_accuracy": 0.5115681233933161,
+    "mae_return": 0.007730953124316174,
+    "rmse_return": 0.01066955409596911,
+    "directional_accuracy": 0.5118818240205524,
     "signal_hit_rate": 0.5511811023622047,
-    "strategy_cagr": 0.1035071595804582,
-    "benchmark_cagr": 0.16097521335875076,
+    "strategy_cagr": 0.10343735561592626,
+    "benchmark_cagr": 0.1628429305823731,
     "strategy_max_drawdown": -0.20368716655380736,
     "benchmark_max_drawdown": -0.25425096319028595
   },
   "series": [
-    {
-      "date": "2023-08-29",
-      "actual_close": 4497.63,
-      "predicted_close": 4435.363,
-      "actual_return": 0.014404107984150372,
-      "predicted_return": 0.0004629684247281949,
-      "signal": "HOLD",
-      "velocity": 0.937630056496426,
-      "acceleration": -0.0579564246466292,
-      "jerk": -3.063573999091814,
-      "opposite_velocity": -0.937630056496426,
-      "strategy_equity": 1.4837022428469917,
-      "benchmark_equity": 1.4363505136860517
-    },
     {
       "date": "2023-08-30",
       "actual_close": 4514.87,
@@ -10659,68 +10645,82 @@
       "opposite_velocity": 0.9004174253348654,
       "strategy_equity": 1.8370442147508264,
       "benchmark_equity": 2.4483838929003685
+    },
+    {
+      "date": "2026-09-03",
+      "actual_close": 7747.71,
+      "predicted_close": 7667.601,
+      "actual_return": 0.010524084259268207,
+      "predicted_return": 0.00013055946977570763,
+      "signal": "HOLD",
+      "velocity": 0.5785175957105997,
+      "acceleration": 1.478935021045465,
+      "jerk": 1.9935961327301142,
+      "opposite_velocity": -0.5785175957105997,
+      "strategy_equity": 1.8370442147508264,
+      "benchmark_equity": 2.4742869552165376
     }
   ],
   "feature_importance": [
     {
       "feature": "return_1d",
-      "coefficient": -0.0038714434218433706,
-      "contribution": -0.001344303171449126
+      "coefficient": -0.003872443227301005,
+      "contribution": -0.0032904247245259346
     },
     {
       "feature": "opposite_velocity",
-      "coefficient": -0.0013726511125091243,
-      "contribution": 0.0006823424299125195
+      "coefficient": -0.0013715911489347726,
+      "contribution": 0.0016382030215292204
     },
     {
       "feature": "velocity",
-      "coefficient": 0.0013726511125091122,
-      "contribution": 0.0006823424299125135
-    },
-    {
-      "feature": "distance_to_60d_low",
-      "coefficient": 0.0007947846870523689,
-      "contribution": -0.00039162941854694396
-    },
-    {
-      "feature": "distance_to_60d_high",
-      "coefficient": -0.000913518474239397,
-      "contribution": -0.00029560694141348765
-    },
-    {
-      "feature": "distance_to_20d_low",
-      "coefficient": -0.00024350057538621335,
-      "contribution": 0.000263029657998361
+      "coefficient": 0.0013715911489347683,
+      "contribution": 0.0016382030215292152
     },
     {
       "feature": "distance_to_20d_high",
-      "coefficient": 0.0015891443040311156,
-      "contribution": 0.00016016726678022092
+      "coefficient": 0.0015905519274352262,
+      "contribution": 0.0006860976884692539
     },
     {
-      "feature": "jerk",
-      "coefficient": -0.0001019166180003337,
-      "contribution": -7.748576689879646e-05
+      "feature": "distance_to_60d_high",
+      "coefficient": -0.0009164989996605299,
+      "contribution": -0.0005073962839107439
     },
     {
-      "feature": "acceleration",
-      "coefficient": -6.735305009874896e-05,
-      "contribution": -6.6189740716689e-05
+      "feature": "ma_distance_50",
+      "coefficient": -0.0011752391894298104,
+      "contribution": -0.0002687493151661829
     },
     {
-      "feature": "opposite_acceleration",
-      "coefficient": 6.735305009873769e-05,
-      "contribution": -6.618974071667792e-05
+      "feature": "distance_to_60d_low",
+      "coefficient": 0.0007950909285347853,
+      "contribution": -0.0002396917886108888
+    },
+    {
+      "feature": "distance_to_20d_low",
+      "coefficient": -0.0002485227006703905,
+      "contribution": 0.00018156524198866672
     },
     {
       "feature": "realized_vol_20d",
-      "coefficient": -5.6646032542838256e-05,
-      "contribution": 4.250231159631979e-05
+      "coefficient": -5.879824997964125e-05,
+      "contribution": 3.911397347147039e-05
     },
     {
-      "feature": "return_20d",
-      "coefficient": -7.916650813262439e-05,
-      "contribution": 2.9187840594218493e-05
+      "feature": "ma_distance_200",
+      "coefficient": -7.127540922270323e-05,
+      "contribution": -3.807376424155628e-05
+    },
+    {
+      "feature": "acceleration",
+      "coefficient": -6.255425542815718e-05,
+      "contribution": -3.039637481783247e-05
+    },
+    {
+      "feature": "opposite_acceleration",
+      "coefficient": 6.255425542815198e-05,
+      "contribution": -3.0396374817829943e-05
     }
   ]
 }
