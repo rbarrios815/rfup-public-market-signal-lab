@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Public-data walk-forward SPY signal dashboard" />
+  <meta name="description" content="Public-data walk-forward market signal research dashboard" />
   <title>RFUP Public Market Signal Lab</title>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="stylesheet" href="styles.css" />
@@ -13,7 +13,8 @@
     <div>
       <p class="eyebrow">RFUP · PUBLIC-DATA RESEARCH</p>
       <h1>Market Signal Lab</h1>
-      <p class="subtitle">Next-session SPY forecast, walk-forward accuracy, entry/exit decisions, and momentum derivatives.</p>
+      <p class="subtitle">Next-session market forecast, walk-forward validation, simple baselines, feature-ablation diagnostics, and momentum derivatives.</p>
+      <p id="instrumentSummary" class="muted">Loading instrument identity…</p>
     </div>
     <div class="header-actions">
       <span id="statusBadge" class="status-badge">Loading</span>
@@ -28,7 +29,7 @@
       <article class="card kpi"><span>Next-session forecast</span><strong id="forecastReturn">—</strong><small id="forecastDate">—</small></article>
       <article class="card kpi"><span>Signal</span><strong id="signal">—</strong><small id="confidence">—</small></article>
       <article class="card kpi"><span>Directional accuracy</span><strong id="directionalAccuracy">—</strong><small>Walk-forward only</small></article>
-      <article class="card kpi"><span>Strategy vs benchmark</span><strong id="strategyVsBenchmark">—</strong><small id="drawdown">—</small></article>
+      <article class="card kpi"><span>Strategy vs buy-and-hold</span><strong id="strategyVsBenchmark">—</strong><small id="drawdown">—</small></article>
     </section>
 
     <section class="card chart-card">
@@ -59,12 +60,33 @@
         <p class="eyebrow">MODEL GOVERNANCE</p>
         <h2>What the chart does—and does not claim</h2>
         <dl>
-          <div><dt>Target</dt><dd>Close-to-close SPY return for the next trading session.</dd></div>
+          <div><dt>Effective target</dt><dd id="targetMethod">Loading…</dd></div>
           <div><dt>Validation</dt><dd>Expanding-window predictions; each forecast uses only earlier training rows.</dd></div>
-          <div><dt>Derivatives</dt><dd>Normalized return transforms, not literal physical laws.</dd></div>
-          <div><dt>Ratings</dt><dd>Public spread/TRACE proxies first; issuer actions only when timestamped and legally accessible.</dd></div>
-          <div><dt>Macro revisions</dt><dd>Flagged until ALFRED point-in-time vintages are fully enabled.</dd></div>
+          <div><dt>Trading calendar</dt><dd>Next forecast date is generated from the NYSE (XNYS) session calendar, not generic weekdays.</dd></div>
+          <div><dt>Features</dt><dd id="featureCount">Loading…</dd></div>
+          <div><dt>Macro revisions</dt><dd>ALFRED/FRED initial-release observations are used when a FRED API key is configured; otherwise revision risk is shown explicitly.</dd></div>
         </dl>
+      </article>
+    </section>
+
+    <section class="two-column">
+      <article class="card table-card">
+        <div class="section-heading"><div><p class="eyebrow">BASELINE CHALLENGE</p><h2>Does the model beat simple alternatives?</h2></div></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Baseline</th><th>Direction</th><th>RMSE</th><th>Strategy CAGR</th><th>Max drawdown</th></tr></thead>
+            <tbody id="benchmarkBody"></tbody>
+          </table>
+        </div>
+      </article>
+      <article class="card table-card">
+        <div class="section-heading"><div><p class="eyebrow">FEATURE ABLATION</p><h2>What happens when a feature family is removed?</h2></div></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Removed group</th><th>#</th><th>Δ direction</th><th>Δ CAGR</th><th>Δ RMSE</th></tr></thead>
+            <tbody id="ablationBody"></tbody>
+          </table>
+        </div>
       </article>
     </section>
   </main>
