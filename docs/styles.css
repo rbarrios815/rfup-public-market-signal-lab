@@ -19,7 +19,7 @@ a { color: inherit; }
 .topbar { display: flex; justify-content: space-between; gap: 24px; align-items: end; padding: 38px 0 26px; }
 h1 { margin: 2px 0 6px; font-size: clamp(2rem, 4vw, 3.6rem); line-height: 1; letter-spacing: -0.05em; }
 h2 { margin: 3px 0 0; font-size: 1.12rem; line-height: 1.35; }
-.subtitle { max-width: 780px; color: var(--muted); margin: 0; }
+.subtitle { max-width: 780px; color: var(--muted); margin: 0 0 6px; }
 .eyebrow { margin: 0; color: var(--accent); font-size: .72rem; font-weight: 800; letter-spacing: .16em; }
 .header-actions { display: flex; align-items: center; justify-content: flex-end; gap: 12px; flex-wrap: wrap; }
 .button, .status-badge { border: 1px solid var(--border); border-radius: 999px; padding: 10px 14px; background: rgba(15, 23, 42, .7); text-decoration: none; font-size: .82rem; font-weight: 700; }
@@ -31,7 +31,7 @@ main { display: grid; gap: 18px; padding-bottom: 28px; }
 .kpi { padding: 18px; min-height: 126px; display: flex; flex-direction: column; justify-content: space-between; }
 .kpi span, .kpi small, .muted { color: var(--muted); }
 .kpi strong { font-size: clamp(1.55rem, 3vw, 2.35rem); letter-spacing: -.04em; }
-.chart-card { padding: 18px; overflow: hidden; }
+.chart-card, .table-card { padding: 18px; overflow: hidden; }
 .section-heading { display: flex; justify-content: space-between; align-items: start; gap: 16px; margin-bottom: 8px; }
 .chart-wrap { position: relative; min-height: 330px; }
 .chart-wrap.tall { min-height: 500px; }
@@ -42,6 +42,11 @@ dl div { border-bottom: 1px solid var(--border); padding-bottom: 12px; }
 dt { font-weight: 800; margin-bottom: 4px; }
 dd { margin: 0; color: var(--muted); line-height: 1.45; }
 .warning { border: 1px solid rgba(251, 191, 36, .4); color: #fde68a; background: rgba(120, 53, 15, .35); padding: 12px 16px; border-radius: 14px; }
+.table-wrap { overflow-x: auto; margin-top: 12px; }
+table { width: 100%; border-collapse: collapse; font-size: .83rem; }
+th, td { padding: 10px 9px; border-bottom: 1px solid var(--border); text-align: right; white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; }
 .hidden { display: none; }
 .positive { color: var(--positive); }
 .negative { color: var(--negative); }
