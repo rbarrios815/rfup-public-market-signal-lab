@@ -10,5 +10,6 @@
   "google_sheet_id": "1D2jwkfc5rT-54elnimGGFnrEPcGaDaraJkSbO0gXZmg",
   "google_sheet_url": "https://docs.google.com/spreadsheets/d/1D2jwkfc5rT-54elnimGGFnrEPcGaDaraJkSbO0gXZmg/edit",
   "price_provider": "auto",
-  "stooq_symbol": "spy.us"
+  "stooq_symbol": "spy.us",
+  "exchange_calendar": "XNYS"
 }
