@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at_utc": "2026-09-18T01:21:43.331878+00:00",
+    "generated_at_utc": "2026-09-19T01:20:46.994182+00:00",
     "data_through": "2026-09-17",
     "status": "live",
     "requested_target": "SPY",
@@ -9,7 +9,7 @@
     "target_is_tradeable": false,
     "using_proxy_target": true,
     "model": "RidgeCV expanding-window walk-forward",
-    "run_id": "20260918T012143Z",
+    "run_id": "20260919T012046Z",
     "sheet_url": "https://docs.google.com/spreadsheets/d/1D2jwkfc5rT-54elnimGGFnrEPcGaDaraJkSbO0gXZmg/edit",
     "revision_bias_flag": true,
     "revision_bias_note": "Revision-risk warning: active macro features use current FRED history for curve_10y_2y, dollar, ust_10y, ust_2y, ust_30y, vix, wti. Configure FRED_API_KEY to use ALFRED/FRED API initial-release observations.",
@@ -112,12 +112,12 @@
   "forecast": {
     "origin_date": "2026-09-17",
     "next_date": "2026-09-18",
-    "predicted_return": 0.002702981534702143,
-    "predicted_close": 7658.432650556466,
-    "lower_return": -0.014822869479092268,
-    "upper_return": 0.020228832548496556,
+    "predicted_return": 0.0008693633771088955,
+    "predicted_close": 7644.402875945294,
+    "lower_return": -0.016656487636685518,
+    "upper_return": 0.018395214390903306,
     "signal": "HOLD",
-    "confidence": 0.2018735851602273,
+    "confidence": 0.07523140080156064,
     "entry_threshold": 0.0006504276271047765,
     "exit_threshold": -0.0007975824532179399
   },
@@ -10810,19 +10810,24 @@
       "contribution": 0.0024129915156684565
     },
     {
+      "feature": "vix_change_1d",
+      "coefficient": 0.001706906973723556,
+      "contribution": -0.0019054467908604952
+    },
+    {
       "feature": "ust_30y",
       "coefficient": 0.0009774673165627227,
-      "contribution": 0.001716810762291958
+      "contribution": 0.001665909828040174
     },
     {
       "feature": "ust_10y",
       "coefficient": -0.0005623885785845449,
-      "contribution": -0.0009276118459411291
+      "contribution": -0.000896226993282867
     },
     {
       "feature": "ust_2y",
       "coefficient": -0.00044874351564803397,
-      "contribution": -0.0005871971704614356
+      "contribution": -0.0005674902536521988
     },
     {
       "feature": "distance_to_60d_low",
@@ -10848,11 +10853,6 @@
       "feature": "jerk",
       "coefficient": -0.00023575359986810983,
       "contribution": -0.00020527102569739222
-    },
-    {
-      "feature": "acceleration",
-      "coefficient": 9.617422626371705e-05,
-      "contribution": 0.00014595923748477377
     }
   ]
 }
