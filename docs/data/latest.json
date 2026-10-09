@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at_utc": "2026-10-08T02:48:11.901163+00:00",
-    "data_through": "2026-10-07",
+    "generated_at_utc": "2026-10-09T03:00:25.305225+00:00",
+    "data_through": "2026-10-08",
     "status": "live",
     "requested_target": "SPY",
     "target": "SP500",
@@ -9,7 +9,7 @@
     "target_is_tradeable": false,
     "using_proxy_target": true,
     "model": "RidgeCV expanding-window walk-forward",
-    "run_id": "20261008T024811Z",
+    "run_id": "20261009T030025Z",
     "sheet_url": "https://docs.google.com/spreadsheets/d/1D2jwkfc5rT-54elnimGGFnrEPcGaDaraJkSbO0gXZmg/edit",
     "revision_bias_flag": true,
     "revision_bias_note": "Revision-risk warning: active macro features use current FRED history for curve_10y_2y, dollar, ust_10y, ust_2y, ust_30y, vix, wti. Configure FRED_API_KEY to use ALFRED/FRED API initial-release observations.",
@@ -110,58 +110,58 @@
     }
   },
   "forecast": {
-    "origin_date": "2026-10-07",
-    "next_date": "2026-10-08",
-    "predicted_return": 9.727473307427181e-05,
-    "predicted_close": 7802.5289520070855,
-    "lower_return": -0.017439187470770494,
-    "upper_return": 0.01763373693691904,
+    "origin_date": "2026-10-08",
+    "next_date": "2026-10-09",
+    "predicted_return": -0.0003180682651424422,
+    "predicted_close": 7762.890478175674,
+    "lower_return": -0.017850380084724823,
+    "upper_return": 0.017214243554439942,
     "signal": "HOLD",
-    "confidence": 0.01,
-    "entry_threshold": 0.0006803160146888216,
-    "exit_threshold": -0.0007782881759609002
+    "confidence": 0.02889296440442022,
+    "entry_threshold": 0.0006794616586331344,
+    "exit_threshold": -0.0007764001058269207
   },
   "metrics": {
-    "mae_return": 0.007710338784581613,
-    "rmse_return": 0.010708830847775816,
-    "directional_accuracy": 0.4948519948519948,
+    "mae_return": 0.007708504787268387,
+    "rmse_return": 0.010706095901191244,
+    "directional_accuracy": 0.4945337620578778,
     "signal_hit_rate": 0.5081081081081081,
-    "strategy_cagr": 0.03424841935506717,
-    "benchmark_cagr": 0.15137203165426416,
+    "strategy_cagr": 0.03344229657459641,
+    "benchmark_cagr": 0.15039525098430317,
     "strategy_max_drawdown": -0.2772977314964482,
     "benchmark_max_drawdown": -0.25425096319028595
   },
   "benchmarks": [
     {
       "name": "zero_return",
-      "mae_return": 0.007482972431797113,
-      "rmse_return": 0.010423873971028355,
+      "mae_return": 0.007481168471148446,
+      "rmse_return": 0.010421196887662427,
       "directional_accuracy": 0.0,
       "strategy_cagr": 0.0,
       "strategy_max_drawdown": 0.0
     },
     {
       "name": "one_day_momentum",
-      "mae_return": 0.010804862912555098,
-      "rmse_return": 0.014913804963334268,
-      "directional_accuracy": 0.4967824967824968,
-      "strategy_cagr": 0.01789321562728463,
+      "mae_return": 0.01079950977119758,
+      "rmse_return": 0.01490914147975759,
+      "directional_accuracy": 0.49710610932475885,
+      "strategy_cagr": 0.01784861585139308,
       "strategy_max_drawdown": -0.23564882665973053
     },
     {
       "name": "one_day_mean_reversion",
-      "mae_return": 0.010789529625990371,
-      "rmse_return": 0.014567737376453024,
-      "directional_accuracy": 0.5032175032175032,
-      "strategy_cagr": 0.07525713291830982,
+      "mae_return": 0.010787012178735471,
+      "rmse_return": 0.014564095991667393,
+      "directional_accuracy": 0.5028938906752412,
+      "strategy_cagr": 0.07435735766423801,
       "strategy_max_drawdown": -0.173366762547831
     },
     {
       "name": "buy_and_hold",
-      "mae_return": 0.007482972431797113,
-      "rmse_return": 0.010423873971028355,
+      "mae_return": 0.007481168471148446,
+      "rmse_return": 0.010421196887662427,
       "directional_accuracy": 0.0,
-      "strategy_cagr": 0.15137203165426416,
+      "strategy_cagr": 0.15039525098430295,
       "strategy_max_drawdown": -0.25425096319028595
     }
   ],
@@ -169,59 +169,45 @@
     {
       "removed_group": "returns_and_volatility",
       "removed_feature_count": 4,
-      "directional_accuracy": 0.5032175032175032,
-      "directional_accuracy_delta": 0.008365508365508423,
-      "strategy_cagr": 0.060516974518888045,
-      "strategy_cagr_delta": 0.026268555163820873,
-      "rmse_return": 0.01075557679753466,
-      "rmse_delta": 4.6745949758843566e-05
+      "directional_accuracy": 0.5028938906752412,
+      "directional_accuracy_delta": 0.00836012861736335,
+      "strategy_cagr": 0.059673285048659874,
+      "strategy_cagr_delta": 0.026230988474063466,
+      "rmse_return": 0.010752854849718888,
+      "rmse_delta": 4.675894852764449e-05
     },
     {
       "removed_group": "derivatives",
       "removed_feature_count": 5,
-      "directional_accuracy": 0.4922779922779923,
-      "directional_accuracy_delta": -0.002574002574002532,
-      "strategy_cagr": 0.05989175627795529,
-      "strategy_cagr_delta": 0.025643336922888116,
-      "rmse_return": 0.010582623988493196,
-      "rmse_delta": -0.00012620685928261925
+      "directional_accuracy": 0.4919614147909968,
+      "directional_accuracy_delta": -0.002572347266880992,
+      "strategy_cagr": 0.05904896582863617,
+      "strategy_cagr_delta": 0.02560666925403976,
+      "rmse_return": 0.010580024855244828,
+      "rmse_delta": -0.00012607104594641524
     },
     {
       "removed_group": "trend_range_and_volume",
       "removed_feature_count": 7,
-      "directional_accuracy": 0.4954954954954955,
-      "directional_accuracy_delta": 0.0006435006435006607,
-      "strategy_cagr": -0.0006446909819072255,
-      "strategy_cagr_delta": -0.0348931103369744,
-      "rmse_return": 0.010638116316488951,
-      "rmse_delta": -7.07145312868647e-05
+      "directional_accuracy": 0.49517684887459806,
+      "directional_accuracy_delta": 0.0006430868167202619,
+      "strategy_cagr": -0.0014015775785150009,
+      "strategy_cagr_delta": -0.03484387415311141,
+      "rmse_return": 0.010635431007016565,
+      "rmse_delta": -7.066489417467854e-05
     },
     {
       "removed_group": "macro_credit_cross_asset",
       "removed_feature_count": 8,
-      "directional_accuracy": 0.5102960102960103,
-      "directional_accuracy_delta": 0.015444015444015524,
-      "strategy_cagr": 0.10231077867606686,
-      "strategy_cagr_delta": 0.06806235932099969,
-      "rmse_return": 0.010619344663178194,
-      "rmse_delta": -8.948618459762164e-05
+      "directional_accuracy": 0.509967845659164,
+      "directional_accuracy_delta": 0.015434083601286175,
+      "strategy_cagr": 0.1014064626537281,
+      "strategy_cagr_delta": 0.0679641660791317,
+      "rmse_return": 0.010616734223232916,
+      "rmse_delta": -8.936167795832797e-05
     }
   ],
   "series": [
-    {
-      "date": "2023-10-03",
-      "actual_close": 4229.45,
-      "predicted_close": 4284.4752,
-      "actual_return": -0.013839410161484267,
-      "predicted_return": -0.0009133069550808727,
-      "signal": "HOLD",
-      "velocity": 0.011469532658548741,
-      "acceleration": 0.40356456219075776,
-      "jerk": 1.6373133426420723,
-      "opposite_velocity": -0.011469532658548741,
-      "strategy_equity": 1.0897002635384627,
-      "benchmark_equity": 1.3028845857643656
-    },
     {
       "date": "2023-10-04",
       "actual_close": 4263.75,
@@ -10791,68 +10777,82 @@
       "opposite_velocity": -0.8254325911021816,
       "strategy_equity": 1.2399904517852522,
       "benchmark_equity": 2.4033398845426386
+    },
+    {
+      "date": "2026-10-08",
+      "actual_close": 7765.36,
+      "predicted_close": 7803.1796,
+      "actual_return": -0.004677813623118254,
+      "predicted_return": 0.00018065933939767642,
+      "signal": "HOLD",
+      "velocity": -0.3144517262912696,
+      "acceleration": -1.1398843173934512,
+      "jerk": -1.0266570278104394,
+      "opposite_velocity": 0.3144517262912696,
+      "strategy_equity": 1.2342035531264226,
+      "benchmark_equity": 2.39212376240674
     }
   ],
   "feature_importance": [
     {
       "feature": "ust_30y",
-      "coefficient": 0.0009802366809565357,
-      "contribution": 0.0019347632449735316
-    },
-    {
-      "feature": "ust_10y",
-      "coefficient": -0.0005520109262004572,
-      "contribution": -0.001008368786331836
-    },
-    {
-      "feature": "distance_to_20d_high",
-      "coefficient": 0.0014683048576840428,
-      "contribution": 0.0008408011931770779
+      "coefficient": 0.0009773481727011956,
+      "contribution": 0.001952138193801499
     },
     {
       "feature": "return_1d",
-      "coefficient": -0.0031513224912886866,
-      "contribution": 0.000719461665317744
-    },
-    {
-      "feature": "distance_to_60d_high",
-      "coefficient": -0.00103646886123481,
-      "contribution": -0.0006764029282265858
-    },
-    {
-      "feature": "ust_2y",
-      "coefficient": -0.00044452216539956875,
-      "contribution": -0.0005875487528831162
-    },
-    {
-      "feature": "velocity",
-      "coefficient": 0.0016143256043151446,
-      "contribution": -0.0005707431157422236
+      "coefficient": -0.0031505544915861835,
+      "contribution": 0.0013810691449443475
     },
     {
       "feature": "opposite_velocity",
-      "coefficient": -0.001614325604315129,
-      "contribution": -0.0005707431157422181
+      "coefficient": -0.0016141140573985996,
+      "contribution": -0.0011137587444454784
+    },
+    {
+      "feature": "velocity",
+      "coefficient": 0.0016141140573985944,
+      "contribution": -0.001113758744445475
+    },
+    {
+      "feature": "ust_10y",
+      "coefficient": -0.0005538688475022425,
+      "contribution": -0.001015180983958675
+    },
+    {
+      "feature": "distance_to_20d_high",
+      "coefficient": 0.0014684126121056321,
+      "contribution": 0.0006232513192893491
+    },
+    {
+      "feature": "ust_2y",
+      "coefficient": -0.00044510511408509305,
+      "contribution": -0.0005824122831042198
+    },
+    {
+      "feature": "distance_to_60d_high",
+      "coefficient": -0.0010393566123291906,
+      "contribution": -0.0005705890910056316
     },
     {
       "feature": "distance_to_60d_low",
-      "coefficient": 0.0007763790432523464,
-      "contribution": -0.00023094923241962303
+      "coefficient": 0.000776214295330718,
+      "contribution": -0.0002973231124056007
+    },
+    {
+      "feature": "wti_change_5d",
+      "coefficient": 0.0002691111581783228,
+      "contribution": -0.00014381035957979071
     },
     {
       "feature": "vix",
-      "coefficient": -0.00021724077439806092,
-      "contribution": 0.00012447207287486522
+      "coefficient": -0.00022006579353377577,
+      "contribution": 0.00012393840166491908
     },
     {
       "feature": "ma_distance_50",
-      "coefficient": -0.0012757919032625668,
-      "contribution": -0.00010574946601119836
-    },
-    {
-      "feature": "jerk",
-      "coefficient": -0.0002517618152883599,
-      "contribution": 9.905286624038396e-05
+      "coefficient": -0.0012728167369583142,
+      "contribution": 8.75312639499179e-05
     }
   ]
 }
