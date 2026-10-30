@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at_utc": "2026-10-29T02:37:07.562571+00:00",
+    "generated_at_utc": "2026-10-30T02:44:26.847469+00:00",
     "data_through": "2026-10-28",
     "status": "live",
     "requested_target": "SPY",
@@ -9,7 +9,7 @@
     "target_is_tradeable": false,
     "using_proxy_target": true,
     "model": "RidgeCV expanding-window walk-forward",
-    "run_id": "20261029T023707Z",
+    "run_id": "20261030T024426Z",
     "sheet_url": "https://docs.google.com/spreadsheets/d/1D2jwkfc5rT-54elnimGGFnrEPcGaDaraJkSbO0gXZmg/edit",
     "revision_bias_flag": true,
     "revision_bias_note": "Revision-risk warning: active macro features use current FRED history for curve_10y_2y, dollar, ust_10y, ust_2y, ust_30y, vix, wti. Configure FRED_API_KEY to use ALFRED/FRED API initial-release observations.",
@@ -51,7 +51,7 @@
         "is_tradeable": false,
         "proxy_for_requested_target": true,
         "point_in_time": false,
-        "primary_price_error": "HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=spy.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7f5c01d1f910>, 'Connection to stooq.com timed out. (connect timeout=45)'))"
+        "primary_price_error": "Price feed missing columns: ['close', 'date', 'high', 'low', 'open', 'volume']"
       },
       "vix": {
         "series_id": "VIXCLS",
@@ -112,12 +112,12 @@
   "forecast": {
     "origin_date": "2026-10-28",
     "next_date": "2026-10-29",
-    "predicted_return": 0.0008096938274599333,
-    "predicted_close": 7750.252791983742,
-    "lower_return": -0.01672673835838657,
-    "upper_return": 0.018346126013306437,
+    "predicted_return": 0.00035731294741599693,
+    "predicted_close": 7746.747518724222,
+    "lower_return": -0.017179119238430504,
+    "upper_return": 0.0178937451332625,
     "signal": "HOLD",
-    "confidence": 0.07039199762769131,
+    "confidence": 0.032335254260623496,
     "entry_threshold": 0.0007604008951180227,
     "exit_threshold": -0.0006895259435299165
   },
@@ -10797,12 +10797,12 @@
     {
       "feature": "ust_30y",
       "coefficient": 0.0009799294268656605,
-      "contribution": 0.0016173578301825363
+      "contribution": 0.0016756951439829777
     },
     {
       "feature": "ust_10y",
       "coefficient": -0.0005631308127786872,
-      "contribution": -0.0008882969054911814
+      "contribution": -0.0009147758772634819
     },
     {
       "feature": "distance_to_60d_low",
@@ -10827,12 +10827,17 @@
     {
       "feature": "ust_2y",
       "coefficient": -0.0004553207180548026,
-      "contribution": -0.0005681159067622384
+      "contribution": -0.0005596036569241524
     },
     {
       "feature": "distance_to_60d_high",
       "coefficient": -0.001050273920313356,
       "contribution": -0.0005143925331570776
+    },
+    {
+      "feature": "vix_change_1d",
+      "coefficient": 0.0017123140289875896,
+      "contribution": -0.0005141829056198314
     },
     {
       "feature": "distance_to_20d_high",
@@ -10848,11 +10853,6 @@
       "feature": "distance_to_20d_low",
       "coefficient": -0.00014341288402278584,
       "contribution": 0.00010307144717799491
-    },
-    {
-      "feature": "vix",
-      "coefficient": -0.00024416020236917805,
-      "contribution": 5.714683424140661e-05
     }
   ]
 }
